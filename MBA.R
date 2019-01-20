@@ -1,8 +1,8 @@
 # --------------------------------------------------------------------------------------------------
 # Author : Lee, Seok June, op2se1@gmail.com
 # Supervisor : Na, In Seop, ypencil@hanmail.net
-# Project Period : 2019.01.11 ~  
-# 
+# Project Period : 2019.01.11 ~ 2019.01.14
+# Project Modify : 
 
 # packages install ---------------------------------------------------------------------------------
 #install.packages("data.table")
@@ -17,7 +17,7 @@ library(dplyr)
 library(tidyr)
 
 # Load Data ----------------------------------------------------------------------------------------
-path <- "C:\\Users\\chosun\\Desktop\\InputData"
+path <- "C://Users//teufe//Desktop//git//InputData"
 
 products <- fread(file.path(path, "products.csv"))            # 제품
 aisles <- fread(file.path(path, "aisles.csv"))                # 통로
@@ -193,6 +193,6 @@ missing <- data.frame(
 submission <- submission %>% bind_rows(missing) %>% arrange(order_id)
 
 # --------------------------------------------------------------------------------------------------
-write.csv(submission, file = "C:\\Users\\chosun\\Desktop\\git\\OutputData\\submit_20190114.csv", row.names = F)
+write.csv(submission, file = "C:\\Users\\teufe\\Desktop\\git\\OutputData\\submit_20190114.csv", row.names = F)
 
 # --------------------------------------------------------------------------------------------------
